@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Registros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Gestión de Registros</h2>
+    <form id="registroForm">
+        <input type="hidden" id="id" />
+        <label>Nombre:</label>
+        <input type="text" id="nombre" required>
+        <label>Duración:</label>
+        <input type="text" id="duracion" required>
+        <label>Fecha de Inicio:</label>
+        <input type="date" id="fecha_inicio" required>
+        <label>Fecha Final:</label>
+        <input type="date" id="fecha_final" required>
+        <label>Descripción:</label>
+        <input type="text" id="descripcion" required>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <button onclick="window.location.href='tabla.html'">Registro de Tabla</button>
+    
+    <h3>Lista de Registros</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Duración</th>
+                <th>Fecha de Inicio</th>
+                <th>Fecha Final</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="registroTableBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
